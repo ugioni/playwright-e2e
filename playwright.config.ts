@@ -5,7 +5,6 @@ const config: PlaywrightTestConfig = {
   timeout: 600000,
   retries: 0,
   use: {
-    channel: 'msedge',
     trace: 'on',
     locale: 'pt-BR',
     headless: true,
