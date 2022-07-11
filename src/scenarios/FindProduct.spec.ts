@@ -3,7 +3,7 @@ import { join } from 'path';
 import { TheConfig } from 'sicolo';
 import HomePage from '../support/pages/HomePage';
 
-test.describe('Find Product', () => {
+test.describe('Find Products', () => {
   const CONFIG = join(__dirname, '../support/fixtures/config.yml');
   const BASE_URL = TheConfig.fromFile(CONFIG)
     .andPath('application.base_url')
@@ -13,7 +13,7 @@ test.describe('Find Product', () => {
     await page.goto(BASE_URL);
   });
 
-  test('Validar a busca de produtos', async ({ page }) => {
+  test('Find product by name', async ({ page }) => {
     const homePage = new HomePage(page);
     await homePage.searchProductByName();
     await homePage.checkProductCount();
