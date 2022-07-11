@@ -14,4 +14,8 @@ export default class HomeElements extends BaseElements {
   getSearchButton(): Locator {
     return this.page.locator('button[name="submit_search"]');
   }
+
+  getProductCount(): Locator {
+    return this.page.locator('span[class="heading-counter"]');
+  }
 }

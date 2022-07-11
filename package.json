@@ -27,12 +27,12 @@
     "sicolo": "^1.0.1"
   },
   "scripts": {
-    "clean": "rimraf ./artifacts && mkdir ./artifacts",
+    "clean": "rimraf ./artifacts && mkdirp ./artifacts",
     "format": "prettier --write \"**/**.[jt]s?(x)\"",
     "verify": "prettier --check \"**/**.[jt]s?(x)\"",
     "lint": "npx eslint \"**/**.[jt]s?(x)\"",
     "test": "npx playwright test --output artifacts/media",
     "show-report": "npx playwright show-report artifacts/report",
-    "ci": "npm run format && npm run verify && npm run lint && npm run test"
+    "ci": "npm run clean && npm run format && npm run verify && npm run lint && npm run test"
   }
 }

@@ -16,5 +16,6 @@ test.describe('Find Product', () => {
   test('Validar a busca de produtos', async ({ page }) => {
     const homePage = new HomePage(page);
     await homePage.searchProductByName();
+    await homePage.checkProductCount();
   });
 });

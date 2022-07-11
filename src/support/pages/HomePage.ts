@@ -1,4 +1,4 @@
-import { Page } from '@playwright/test';
+import { Page, expect } from '@playwright/test';
 import HomeElements from '../elements/HomeElements';
 import BasePage from './BasePage';
 
@@ -14,5 +14,11 @@ export default class HomePage extends BasePage {
   async searchProductByName(): Promise<void> {
     await this.homeElements.getSearchField().type('t-shirts');
     await this.homeElements.getSearchButton().click();
+  }
+
+  async checkProductCount(): Promise<void> {
+    await this.homeElements.getSearchField().type('t-shirts');
+    await this.homeElements.getSearchButton().click();
+    await expect(this.homeElements.getProductCount()).toBeVisible();
   }
 }
