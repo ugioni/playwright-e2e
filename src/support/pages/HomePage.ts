@@ -17,8 +17,6 @@ export default class HomePage extends BasePage {
   }
 
   async checkProductCount(): Promise<void> {
-    await this.homeElements.getSearchField().type('t-shirts');
-    await this.homeElements.getSearchButton().click();
     await expect(this.homeElements.getProductCount()).toBeVisible();
   }
 }
