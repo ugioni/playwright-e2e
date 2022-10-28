@@ -1,37 +1,37 @@
 import { Locator, Page } from '@playwright/test';
 import BaseElements from './BaseElements';
 
-export default class ContatoElements extends BaseElements {
+export default class ContactElements extends BaseElements {
   constructor(readonly page: Page) {
     super(page);
     this.page = page;
   }
 
-  getLinkContato(): Locator {
+  getContactLink(): Locator {
     return this.page.locator('#contact-link >> text=Contact us');
   }
 
-  getCampoEmail(): Locator {
+  getEmailField(): Locator {
     return this.page.locator('#email');
   }
 
-  getCampoNroOrdem(): Locator {
+  getNroOrdemField(): Locator {
     return this.page.locator('#id_order');
   }
 
-  getCampoMensagem(): Locator {
+  getMessageField(): Locator {
     return this.page.locator('#message');
   }
 
-  getBotaoEnviar(): Locator {
+  getSendButton(): Locator {
     return this.page.locator('#submitMessage');
   }
 
-  getComboAssunto(): Locator {
+  getSubjectSelect(): Locator {
     return this.page.locator('#id_contact');
   }
 
-  getMensagemOK(): Locator {
+  getMessageOK(): Locator {
     return this.page.locator(
       'text=Your message has been successfully sent to our team.'
     );
