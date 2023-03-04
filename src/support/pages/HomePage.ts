@@ -19,4 +19,10 @@ export default class HomePage extends BasePage {
   async checkProductCount(): Promise<void> {
     await expect(this.homeElements.getProductCount()).toBeVisible();
   }
+
+  async login(): Promise<void> {
+    await this.homeElements.getLoginField().type('standard_user');
+    await this.homeElements.getPassField().type('secret_sauce');
+    await this.homeElements.getSubmitButton().click();
+  }
 }

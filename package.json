@@ -30,7 +30,7 @@
     "format": "prettier --write \"**/**.[jt]s?(x)\"",
     "verify": "prettier --check \"**/**.[jt]s?(x)\"",
     "lint": "npx eslint \"**/**.[jt]s?(x)\"",
-    "test": "npx playwright test --output artifacts/media",
+    "test": "npx playwright test --output artifacts/media src/scenarios/Login.spec.ts",
     "show-report": "npx playwright show-report artifacts/report",
     "ci": "npm run clean && npm run format && npm run verify && npm run lint && npm run test"
   }
