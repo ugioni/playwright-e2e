@@ -6,7 +6,6 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'airbnb-base',
-    'plugin:playwright/playwright-test',
     'prettier',
     'plugin:import/recommended',
     'plugin:import/typescript',
