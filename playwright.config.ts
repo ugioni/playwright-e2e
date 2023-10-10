@@ -16,6 +16,16 @@ const config: PlaywrightTestConfig = {
   expect: {
     timeout: 30000
   },
+  /* projects: [
+    {
+      name: 'Mobile Chrome',
+      use: { ...devices['Pixel 5'] }
+    },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] }
+    }
+  ], */
   reporter: [
     [
       'html',

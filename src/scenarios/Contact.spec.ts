@@ -3,7 +3,7 @@ import { join } from 'path';
 import { TheConfig } from 'sicolo';
 import ContactPage from '../support/pages/ContactPage';
 
-test.describe('Contact Form', () => {
+test.describe('Formulário de contato', () => {
   let contactPage: ContactPage;
   const CONFIG = join(__dirname, '../support/fixtures/config.yml');
   const BASE_URL = TheConfig.fromFile(CONFIG)
@@ -15,8 +15,11 @@ test.describe('Contact Form', () => {
     await page.goto(BASE_URL);
   });
 
-  test('Send contact message', async () => {
-    await contactPage.fillFormContact('a@b.com.br');
-    await contactPage.validateMessageOK();
+  test('Enviar mensagem de contato', async () => {
+    // await contactPage.fillFormContact('a@b.com.br');
+    // await contactPage.validateMessageOK();
+
+    await contactPage.preencherFormulariodeContato('a@b.com.br');
+    await contactPage.validarMensagemOK();
   });
 });
