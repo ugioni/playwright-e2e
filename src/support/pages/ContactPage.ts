@@ -11,7 +11,7 @@ export default class ContactPage extends BasePage {
     this.contactElements = new ContactElements(page);
   }
 
-  async fillFormContact(email: string): Promise<void> {
+  async preencherFormulariodeContato(email: string): Promise<void> {
     await this.contactElements.getContactLink().click();
     await this.contactElements.getSubjectSelect().selectOption('2');
     await this.contactElements.getEmailField().type(email);
@@ -20,7 +20,7 @@ export default class ContactPage extends BasePage {
     await this.contactElements.getSendButton().click();
   }
 
-  async validateMessageOK(): Promise<void> {
+  async validarMensagemOK(): Promise<void> {
     await expect(this.contactElements.getMessageOK()).toBeVisible();
   }
 }
