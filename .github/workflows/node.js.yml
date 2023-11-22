@@ -14,12 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js 14
+    - name: Use Node.js 21
       uses: actions/setup-node@v2
       with:
-        node-version: 14
+        node-version: 21
         cache: 'npm'
-    - run: npm install      
+    - run: npm install 
+    - run: npx playwright install      
     - run: npm test
 
   sonarcloud:

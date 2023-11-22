@@ -60,4 +60,8 @@ export default class CadastroElements extends BaseElements {
       'text=Recebemos os seus dados. Fique de olho na sua caixa de email, pois e em breve retornamos o contato.'
     );
   }
+
+  getValidarCNH(): Locator {
+    return this.page.locator('text=Adicione uma foto da sua CNH');
+  }
 }
