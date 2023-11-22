@@ -7,7 +7,7 @@ test.describe('Cadastro de usuário para delivery', () => {
   let cadastroPage: CadastroPage;
   const CONFIG = join(__dirname, '../support/fixtures/config.yml');
   const BASE_URL = TheConfig.fromFile(CONFIG)
-    .andPath('application.url_novos_testes')
+    .andPath('application.base_url_bugereats')
     .retrieveData();
 
   test.beforeEach(async ({ page }) => {

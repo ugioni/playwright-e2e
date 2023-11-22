@@ -14,14 +14,14 @@ export default class CadastroPage extends BasePage {
 
   async preencherFormulario(): Promise<void> {
     await this.cadastroElements.getBotaoNovoCadastro().click();
-    await this.cadastroElements.getCampoNome().type(faker.name.firstName());
-    await this.cadastroElements.getCampoCpf().type('33223745050');
-    await this.cadastroElements.getCampoEmail().type('a@b.com.br');
-    await this.cadastroElements.getCampoWhatsapp().type('48 999998888');
-    await this.cadastroElements.getCampoCep().type('88817070');
+    await this.cadastroElements.getCampoNome().fill(faker.person.firstName());
+    await this.cadastroElements.getCampoCpf().fill('33223745050');
+    await this.cadastroElements.getCampoEmail().fill('a@b.com.br');
+    await this.cadastroElements.getCampoWhatsapp().fill('48 999998888');
+    await this.cadastroElements.getCampoCep().fill('88817070');
     await this.cadastroElements.getBotaoBuscarCep().click();
-    await this.cadastroElements.getCampoNumero().type('10');
-    await this.cadastroElements.getCampoComplemento().type(faker.random.word());
+    await this.cadastroElements.getCampoNumero().fill('10');
+    await this.cadastroElements.getCampoComplemento().fill(faker.word.words());
     await this.cadastroElements.getCampoMetodoEntrega().click();
     await this.cadastroElements
       .getCampoAnexo()
@@ -31,14 +31,14 @@ export default class CadastroPage extends BasePage {
 
   async preencherFormularioInvalido(): Promise<void> {
     await this.cadastroElements.getBotaoNovoCadastro().click();
-    await this.cadastroElements.getCampoNome().type(faker.name.firstName());
-    await this.cadastroElements.getCampoCpf().type('33223745050');
-    await this.cadastroElements.getCampoEmail().type('a@b.com.br');
-    await this.cadastroElements.getCampoWhatsapp().type('48 999998888');
-    await this.cadastroElements.getCampoCep().type('88817070');
+    await this.cadastroElements.getCampoNome().fill(faker.person.firstName());
+    await this.cadastroElements.getCampoCpf().fill('33223745050');
+    await this.cadastroElements.getCampoEmail().fill('a@b.com.br');
+    await this.cadastroElements.getCampoWhatsapp().fill('48 999998888');
+    await this.cadastroElements.getCampoCep().fill('88817070');
     await this.cadastroElements.getBotaoBuscarCep().click();
-    await this.cadastroElements.getCampoNumero().type('10');
-    await this.cadastroElements.getCampoComplemento().type(faker.random.word());
+    await this.cadastroElements.getCampoNumero().fill('10');
+    await this.cadastroElements.getCampoComplemento().fill(faker.word.words());
     await this.cadastroElements.getCampoMetodoEntrega().click();
     await this.cadastroElements.getBotaoCadastrar().click();
   }

@@ -1,4 +1,4 @@
 application:
-  base_url: "http://www.automationpractice.pl/index.php"
-  url_novos_testes: "https://buger-eats.vercel.app/"
+  base_url_automationpractice: "http://www.automationpractice.pl/index.php"
+  base_url_bugereats: "https://buger-eats.vercel.app/"
   

@@ -14,9 +14,9 @@ export default class ContactPage extends BasePage {
   async preencherFormulariodeContato(email: string): Promise<void> {
     await this.contactElements.getContactLink().click();
     await this.contactElements.getSubjectSelect().selectOption('2');
-    await this.contactElements.getEmailField().type(email);
-    await this.contactElements.getNroOrdemField().type('123456');
-    await this.contactElements.getMessageField().type('mensagem de testes');
+    await this.contactElements.getEmailField().fill(email);
+    await this.contactElements.getNroOrdemField().fill('123456');
+    await this.contactElements.getMessageField().fill('mensagem de testes');
     await this.contactElements.getSendButton().click();
   }
 
