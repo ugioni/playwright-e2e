@@ -4,16 +4,23 @@ import { TheConfig } from 'sicolo';
 import HomePage from '../support/pages/HomePage';
 
 test.describe('Find Products', () => {
-  let homePage: HomePage;
-  let BASE_URL = '';
   const CONFIG = join(__dirname, '../support/fixtures/config.yml');
+  let homePage: HomePage;
+  let BASE_URL = TheConfig.fromFile(CONFIG)
+    .andPath('application.base_url')
+    .retrieveData();
+
   if (process.env.QA) {
     BASE_URL = TheConfig.fromFile(CONFIG)
-      .andPath('application.base_url_automationpractice_QA')
+      .andPath('application.automationpractice_QA')
+      .retrieveData();
+  } else if (process.env.HML) {
+    BASE_URL = TheConfig.fromFile(CONFIG)
+      .andPath('application.automationpractice_HML')
       .retrieveData();
   } else if (process.env.PRD) {
     BASE_URL = TheConfig.fromFile(CONFIG)
-      .andPath('application.base_url_automationpractice_PRD')
+      .andPath('application.automationpractice_PRD')
       .retrieveData();
   }
 

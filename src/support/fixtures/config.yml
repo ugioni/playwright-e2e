@@ -1,6 +1,9 @@
 application:
-  base_url_automationpractice_QA: "http://www.automationpractice.pl/index.php"
-  base_url_automationpractice_PRD: "https://google.com"
-  base_url_bugereats_QA: "https://buger-eats.vercel.app/"
-  base_url_bugereats_PRD: "https://google.com"
+  base_url: "https://google.com"
+  automationpractice_QA: "http://www.automationpractice.pl/index.php"
+  automationpractice_HML: "https://www.bing.com/?cc=br"
+  automationpractice_PRD: "https://google.com"
+  bugereats_QA: "https://buger-eats.vercel.app/"
+  bugereats_HML: "https://www.bing.com/?cc=br"
+  bugereats_PRD: "https://google.com"
   
