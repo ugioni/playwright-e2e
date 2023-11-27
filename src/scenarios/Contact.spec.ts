@@ -5,10 +5,17 @@ import ContactPage from '../support/pages/ContactPage';
 
 test.describe('Formulário de contato', () => {
   let contactPage: ContactPage;
+  let BASE_URL = '';
   const CONFIG = join(__dirname, '../support/fixtures/config.yml');
-  const BASE_URL = TheConfig.fromFile(CONFIG)
-    .andPath('application.base_url_automationpractice')
-    .retrieveData();
+  if (process.env.QA) {
+    BASE_URL = TheConfig.fromFile(CONFIG)
+      .andPath('application.base_url_automationpractice_QA')
+      .retrieveData();
+  } else if (process.env.PRD) {
+    BASE_URL = TheConfig.fromFile(CONFIG)
+      .andPath('application.base_url_automationpractice_PRD')
+      .retrieveData();
+  }
 
   test.beforeEach(async ({ page }) => {
     contactPage = new ContactPage(page);
@@ -16,9 +23,6 @@ test.describe('Formulário de contato', () => {
   });
 
   test('Enviar mensagem de contato', async () => {
-    // await contactPage.fillFormContact('a@b.com.br');
-    // await contactPage.validateMessageOK();
-
     await contactPage.preencherFormulariodeContato('a@b.com.br');
     await contactPage.validarMensagemOK();
   });

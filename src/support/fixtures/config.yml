@@ -1,4 +1,6 @@
 application:
-  base_url_automationpractice: "http://www.automationpractice.pl/index.php"
-  base_url_bugereats: "https://buger-eats.vercel.app/"
+  base_url_automationpractice_QA: "http://www.automationpractice.pl/index.php"
+  base_url_automationpractice_PRD: "https://google.com"
+  base_url_bugereats_QA: "https://buger-eats.vercel.app/"
+  base_url_bugereats_PRD: "https://google.com"
   
