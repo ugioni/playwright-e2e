@@ -30,7 +30,6 @@ test.describe('Cadastro de usuário para delivery', () => {
   });
 
   test('Preencher formulário de cadastro', async () => {
-    console.log(process.env);
     await cadastroPage.preencherFormulario();
     await cadastroPage.validarCadastro();
   });
