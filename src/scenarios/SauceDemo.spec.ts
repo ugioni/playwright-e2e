@@ -7,7 +7,7 @@ test.describe('Sauce Demo', () => {
   const CONFIG = join(__dirname, '../support/fixtures/config.yml');
   let cadastroPage: CadastroPage;
   let BASE_URL = TheConfig.fromFile(CONFIG)
-    .andPath('application.base_url')
+    .andPath('application.sauceDemo')
     .retrieveData();
 
   if (process.env.QA) {

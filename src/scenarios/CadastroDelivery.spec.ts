@@ -7,7 +7,7 @@ test.describe('Cadastro de usuário para delivery', () => {
   const CONFIG = join(__dirname, '../support/fixtures/config.yml');
   let cadastroPage: CadastroPage;
   let BASE_URL = TheConfig.fromFile(CONFIG)
-    .andPath('application.base_url')
+    .andPath('application.bugereats_QA')
     .retrieveData();
 
   if (process.env.QA) {
@@ -30,6 +30,7 @@ test.describe('Cadastro de usuário para delivery', () => {
   });
 
   test('Preencher formulário de cadastro', async () => {
+    console.log(process.env);
     await cadastroPage.preencherFormulario();
     await cadastroPage.validarCadastro();
   });

@@ -7,7 +7,7 @@ test.describe('Bug Bank - Conta Digital', () => {
   const CONFIG = join(__dirname, '../support/fixtures/config.yml');
   let contaBancariaPage: ContaBancariaPage;
   let BASE_URL = TheConfig.fromFile(CONFIG)
-    .andPath('application.base_url')
+    .andPath('application.bug_bank')
     .retrieveData();
 
   if (process.env.QA) {
