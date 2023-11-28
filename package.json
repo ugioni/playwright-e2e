@@ -30,9 +30,10 @@
     "format": "prettier --write \"**/**.[jt]s?(x)\"",
     "verify": "prettier --check \"**/**.[jt]s?(x)\"",
     "lint": "npx eslint \"**/**.[jt]s?(x)\"",
-    "scenario": "SET QA=1 && npx playwright test src/scenarios/CadastroDelivery.spec.ts --output artifacts/media --workers 1 --debug",
+    "scenario": "SET QA=1 && npx playwright test src/scenarios/VerificarExtrato.spec.ts --output artifacts/media --workers 1 --debug",
     "test": "SET QA=1 && npx playwright test --output artifacts/media --workers 1",
     "show-report": "npx playwright show-report artifacts/report",
+    "actions": "QA=1 && npx playwright test --output artifacts/media --workers 1",
     "ci": "npm run clean && npm run format && npm run verify && npm run lint && npm run test"
   }
 }

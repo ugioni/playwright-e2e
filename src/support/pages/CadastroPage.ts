@@ -50,4 +50,14 @@ export default class CadastroPage extends BasePage {
   async validarCNH(): Promise<void> {
     await expect(this.cadastroElements.getValidarCNH()).toBeVisible();
   }
+
+  async validarCarrinho(): Promise<void> {
+    await this.page.locator('[data-test="username"]').click();
+    await this.page.locator('[data-test="username"]').fill('standard_user');
+    await this.page.locator('[data-test="password"]').click();
+    await this.page.locator('[data-test="password"]').fill('secret_sauce');
+    await this.page.locator('[data-test="login-button"]').click();
+    await this.page.locator('#shopping_cart_container a').click();
+    await this.page.locator('[data-test="checkout"]').click();
+  }
 }

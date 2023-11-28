@@ -6,4 +6,6 @@ application:
   bugereats_QA: "https://buger-eats.vercel.app/"
   bugereats_HML: "https://www.bing.com/?cc=br"
   bugereats_PRD: "https://google.com"
+  sauceDemo: "https://www.saucedemo.com/"
+  bug_bank: "https://bugbank.netlify.app/"
   
