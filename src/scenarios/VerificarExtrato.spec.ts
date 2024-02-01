@@ -3,7 +3,7 @@ import { join } from 'path';
 import { TheConfig } from 'sicolo';
 import ContaBancariaPage from '../support/pages/ContaBancariaPage';
 
-test.describe.skip('Bug Bank - Conta Digital', () => {
+test.describe('Bug Bank - Conta Digital', () => {
   const CONFIG = join(__dirname, '../support/fixtures/config.yml');
   let contaBancariaPage: ContaBancariaPage;
   let BASE_URL = TheConfig.fromFile(CONFIG)
