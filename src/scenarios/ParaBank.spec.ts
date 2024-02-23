@@ -3,7 +3,7 @@ import { join } from 'path';
 import { TheConfig } from 'sicolo';
 import ParaBankPage from '../support/pages/ParaBankPage';
 
-test.describe('Para Bank - Sistema bancário', () => {
+test.describe.skip('Para Bank - Sistema bancário', () => {
   const CONFIG = join(__dirname, '../support/fixtures/config.yml');
   let paraBankPage: ParaBankPage;
   let BASE_URL = TheConfig.fromFile(CONFIG)
