@@ -7,27 +7,27 @@ export default class HomeElements extends BaseElements {
     this.page = page;
   }
 
-  getSearchField(): Locator {
-    return this.page.locator('#search_query_top');
+  getBotaoPropietario(): Locator {
+    return this.page.locator(
+      'img[src="/Fernanda/Content/img/proprietario.png"]'
+    );
   }
 
-  getSearchButton(): Locator {
-    return this.page.locator('button[name="submit_search"]');
+  getBotaoFazenda(): Locator {
+    return this.page.locator('img[src="/Fernanda/Content/img/fazenda.png"]');
   }
 
-  getProductCount(): Locator {
-    return this.page.locator('span[class="heading-counter"]');
+  getBotaoCultura(): Locator {
+    return this.page.locator('img[src="/Fernanda/Content/img/folha.png"]');
   }
 
-  getLoginField(): Locator {
-    return this.page.locator('#user-name');
+  getBotaoGarantia(): Locator {
+    return this.page.locator(
+      'img[src="/Fernanda/Content/img/dinheiro-de-volta.png"]'
+    );
   }
 
-  getPassField(): Locator {
-    return this.page.locator('#password');
-  }
-
-  getSubmitButton(): Locator {
-    return this.page.locator('#login-button');
+  getBotaoUsuarios(): Locator {
+    return this.page.locator('img[src="/Fernanda/Content/img/usuarios.png"]');
   }
 }
