@@ -1,5 +1,5 @@
 application:
-  base_url: "http://processoseletivo.agrometrikaweb.com.br/Fernanda/"
+  base_url: "https://google.com"
   automationpractice_QA: "http://www.automationpractice.pl/index.php"
   automationpractice_HML: "https://www.bing.com/?cc=br"
   automationpractice_PRD: "https://google.com"
