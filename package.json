@@ -20,8 +20,8 @@
     "mkdirp": "^3.0.1"    
   },
   "dependencies": {
-    "@playwright/test": "1.48.0",
-    "playwright": "1.48.0",
+    "@playwright/test": "1.48.2",
+    "playwright": "1.48.2",
     "sicolo": "^1.0.1",
     "@faker-js/faker": "^8.4.1"
   },
@@ -30,8 +30,8 @@
     "format": "prettier --write \"**/**.[jt]s?(x)\"",
     "verify": "prettier --check \"**/**.[jt]s?(x)\"",
     "lint": "npx eslint \"**/**.[jt]s?(x)\"",
-    "scenario": "SET QA=1 && npx playwright test src/scenarios/CadastroDelivery.spec.ts --output artifacts/media --workers 1",
-    "test": "SET QA=1 && npx playwright test --output artifacts/media --workers 1",
+    "scenario": "npx playwright test src/scenarios/CadastroDelivery.spec.ts --output artifacts/media --workers 1",
+    "test": "npx playwright test --output artifacts/media --workers 1",
     "show-report": "npx playwright show-report artifacts/report",
     "actions": "npx playwright test --output artifacts/media --workers 1",    
     "ci": "npm run clean && npm run format && npm run verify && npm run lint && npm run test"

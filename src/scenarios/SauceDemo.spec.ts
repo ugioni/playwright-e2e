@@ -6,15 +6,9 @@ import CadastroPage from '../support/pages/CadastroPage';
 test.describe('Sauce Demo', () => {
   const CONFIG = join(__dirname, '../support/fixtures/config.yml');
   let cadastroPage: CadastroPage;
-  let BASE_URL = TheConfig.fromFile(CONFIG)
+  const BASE_URL = TheConfig.fromFile(CONFIG)
     .andPath('application.sauceDemo')
     .retrieveData();
-
-  if (process.env.QA) {
-    BASE_URL = TheConfig.fromFile(CONFIG)
-      .andPath('application.sauceDemo')
-      .retrieveData();
-  }
 
   test.beforeEach(async ({ page }) => {
     cadastroPage = new CadastroPage(page);

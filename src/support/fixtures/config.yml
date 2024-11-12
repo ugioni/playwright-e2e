@@ -1,12 +1,5 @@
 application:
   base_url: "https://google.com"
-  automationpractice_QA: "http://www.automationpractice.pl/index.php"
-  automationpractice_HML: "https://www.bing.com/?cc=br"
-  automationpractice_PRD: "https://google.com"
-  bugereats_QA: "https://buger-eats.vercel.app/"
-  bugereats_HML: "https://www.bing.com/?cc=br"
-  bugereats_PRD: "https://google.com"
+  automationpractice_QA: "http://www.automationpractice.pl/index.php"  
+  bugereats_QA: "https://buger-eats.vercel.app/" 
   sauceDemo: "https://www.saucedemo.com/"
-  bug_bank: "https://bugbank.netlify.app/"
-  para_bank: "https://parabank.parasoft.com/parabank/index.htm"
-  
