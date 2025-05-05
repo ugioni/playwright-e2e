@@ -5,35 +5,29 @@
   "main": "index.js",
   "author": "ugioni",
   "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^22.15.3",
-    "@typescript-eslint/eslint-plugin": "^7.1.1",
-    "@typescript-eslint/parser": "^7.1.1",
-    "eslint": "^8.57.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-prettier": "^5.1.3",
-    "typescript": "^5.8.3",
+  "devDependencies": {    
+    "@types/node": "^22.15.3",        
+    "mkdirp": "^3.0.1",
     "prettier": "^3.5.3",
     "rimraf": "^6.0.1",
-    "mkdirp": "^3.0.1"    
+    "typescript": "^5.8.3"
   },
   "dependencies": {
+    "@faker-js/faker": "^9.7.0",
     "@playwright/test": "1.52.0",
     "playwright": "1.52.0",
-    "sicolo": "^1.0.1",
-    "@faker-js/faker": "^9.7.0"
+    "sicolo": "^1.0.1"
   },
   "scripts": {
     "clean": "rimraf ./artifacts && mkdirp ./artifacts",
     "format": "prettier --write \"**/**.[jt]s?(x)\"",
-    "verify": "prettier --check \"**/**.[jt]s?(x)\"",
-    "lint": "npx eslint \"**/**.[jt]s?(x)\"",
+    "verify": "prettier --check \"**/**.[jt]s?(x)\"",    
     "scenario": "npx playwright test src/scenarios/CadastroDelivery.spec.ts --output artifacts/media --workers 1",
-    "test": "npx playwright test --output artifacts/media --workers 1",
+    "test": "npx playwright test --output artifacts/media --workers 4",
+    "ui": "npx playwright test --output artifacts/media --debug --workers 1",
+    "debug": "npx playwright test --output artifacts/media --ui --workers 1",
     "show-report": "npx playwright show-report artifacts/report",
-    "actions": "npx playwright test --output artifacts/media --workers 1",    
-    "ci": "npm run clean && npm run format && npm run verify && npm run lint && npm run test"
+    "actions": "npx playwright test --output artifacts/media --workers 1",
+    "ci": "npm run clean && npm run format && npm run verify && npm run test"
   }
 }
