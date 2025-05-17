@@ -20,6 +20,8 @@ In order to execute this project you must follow the steps below:
 
 All execution artifacts can be found in `./artifacts`, if you want to remove these files run `npm run clean`.
 
+To use the AI ​​feature with ZeroStep, you must create the "zerostep.config.json" file in the root of the project and add your ZeroStep token.
+
 ## Project Structure
 </br>
 <ul>

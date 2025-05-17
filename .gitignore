@@ -2,3 +2,4 @@ node_modules/
 output/
 dist/
 artifacts/
+zerostep.config.json
