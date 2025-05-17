@@ -1,10 +1,10 @@
 # Playwright E2E
 
-## GitHub Actions
+## GitHub Actions + SonarCloud
 
 [![Build and Tests](https://github.com/ugioni/playwright-e2e/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/ugioni/playwright-e2e/actions/workflows/node.js.yml)
 
-## SonarCloud
+</br>
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ugioni_playwright-e2e&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ugioni_playwright-e2e)
 
@@ -20,7 +20,10 @@ In order to execute this project you must follow the steps below:
 
 All execution artifacts can be found in `./artifacts`, if you want to remove these files run `npm run clean`.
 
-To use the AI ​​feature with ZeroStep, you must create the "zerostep.config.json" file in the root of the project and add your ZeroStep token.
+## Using ZeroStep AI
+</br>
+
+To use the AI ​​feature with ZeroStep, you must create the `zerostep.config.json` file in the root of the project and add your ZeroStep token.
 
 ## Project Structure
 </br>
