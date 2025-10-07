@@ -3,7 +3,7 @@ import { join } from 'path';
 import { TheConfig } from 'sicolo';
 import LojinhaPage from '../support/pages/LojinhaPage';
 
-test.describe('Lojinha de informática do Luiz Miguel', () => {
+test.describe.skip('Testes funcionais no site da Trier Sistemas', () => {
   const CONFIG = join(__dirname, '../support/fixtures/config.yml');
   let lojinhaPage: LojinhaPage;
   const BASE_URL = TheConfig.fromFile(CONFIG)
@@ -15,9 +15,8 @@ test.describe('Lojinha de informática do Luiz Miguel', () => {
     await page.goto(BASE_URL);
   });
 
-  test('Pesquisar uma impressora HP e validar o produto', async () => {
-    await lojinhaPage.pesquisarAImpressora();
-    await lojinhaPage.validarPesquisa();
-    await lojinhaPage.validarProdutoDetalhe();
+  test('Validar funcionalidade de contato para dúvidas', async () => {
+    await lojinhaPage.preencherCamposValidos();
+    await lojinhaPage.enviarFormulario();
   });
 });

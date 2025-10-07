@@ -7,21 +7,63 @@ export default class LojinhaElements extends BaseElements {
     this.page = page;
   }
 
-  getCampoPesquisa(): Locator {
-    return this.page.locator('input[name="keywords"]');
+  getCampoNome(): Locator {
+    return this.page.locator('input[name="nome"]').nth(1);
   }
 
-  getCampoBotaoPesquisa(): Locator {
-    return this.page.locator('input[alt="Quick Find"]');
+  getCampoEmail(): Locator {
+    return this.page.locator('input[name="email"]').nth(1);
   }
 
-  getTituloImpressoraHP(): Locator {
-    return this.page.locator('text=Hewlett Packard LaserJet 1100Xi').nth(1);
+  getCampoTelefone(): Locator {
+    return this.page.locator('input[name="telefone"]').nth(1);
   }
 
-  getDetalhe(): Locator {
+  getCampoEstado(): Locator {
+    return this.page.locator('#estado');
+  }
+
+  getCampoCidade(): Locator {
+    return this.page.locator('#cidade');
+  }
+
+  getCampoCargo(): Locator {
+    return this.page.locator('input[name="cargo"]');
+  }
+
+  getCampoAssunto(): Locator {
+    return this.page.locator('select[name="assunto"]');
+  }
+
+  getCampoConheceu(): Locator {
+    return this.page.locator('input[name="como_conheceu_trier"]');
+  }
+
+  getCampoComentario(): Locator {
+    return this.page.locator('textarea[name="comentario"]');
+  }
+
+  getCheckAceito(): Locator {
     return this.page.locator(
-      'text=HP LaserJet 1100xi also features The Document Builder for the Web Era from Trellix Corp. (featuring software to create Web documents).'
+      'label[for="checkbox-aceite-politica-dados-pessoais"]'
+    );
+  }
+
+  getBotaoEnviar(): Locator {
+    return this.page.locator('input[type="submit"]').nth(2);
+  }
+
+  getBotaoCookies(): Locator {
+    return this.page.locator('text=Ok, entendi!');
+  }
+
+  getBotaoAceitar(): Locator {
+    return this.page.locator('text=Aceitar');
+  }
+
+  getTextoModal(): Locator {
+    return this.page.locator(
+      'text=TERMO DE CONSENTIMENTO PARA O TRATAMENTO DE DADOS PESSOAIS - GRUPO TRIER'
     );
   }
 }

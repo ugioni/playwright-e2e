@@ -6,27 +6,27 @@
   "author": "ugioni",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^22.15.18",
+    "@types/node": "^24.7.0",
     "@zerostep/playwright": "^0.1.5",
     "mkdirp": "^3.0.1",
-    "prettier": "^3.5.3",
+    "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@faker-js/faker": "^9.8.0",
-    "@playwright/test": "1.52.0",
-    "playwright": "1.52.0",
+    "@faker-js/faker": "^9.9.0",
+    "@playwright/test": "1.56.0",
+    "playwright": "1.56.0",
     "sicolo": "^1.0.1"
   },
   "scripts": {
     "clean": "rimraf ./artifacts && mkdirp ./artifacts",
     "format": "prettier --write \"**/**.[jt]s?(x)\"",
     "verify": "prettier --check \"**/**.[jt]s?(x)\"",
-    "scenario": "npx playwright test src/scenarios/ZeroStepExample.spec.ts --output artifacts/media --workers 1",
+    "scenario": "npx playwright test src/scenarios/ContatoFarmacia.spec.ts --output artifacts/media --workers 1",
     "test": "npx playwright test --output artifacts/media --workers 4",
-    "ui": "npx playwright test --output artifacts/media --debug --workers 1",
-    "debug": "npx playwright test --output artifacts/media --ui --workers 1",
+    "debug": "npx playwright test --output artifacts/media --debug --workers 1",
+    "ui": "npx playwright test --output artifacts/media --ui --workers 1",
     "show-report": "npx playwright show-report artifacts/report",
     "actions": "npx playwright test --output artifacts/media --workers 1",
     "ci": "npm run clean && npm run format && npm run verify && npm run test"
