@@ -1,7 +1,7 @@
 import { Locator, Page } from '@playwright/test';
 import BaseElements from './BaseElements';
 
-export default class LojinhaElements extends BaseElements {
+export default class FarmaciaElements extends BaseElements {
   constructor(readonly page: Page) {
     super(page);
     this.page = page;
@@ -64,6 +64,12 @@ export default class LojinhaElements extends BaseElements {
   getTextoModal(): Locator {
     return this.page.locator(
       'text=TERMO DE CONSENTIMENTO PARA O TRATAMENTO DE DADOS PESSOAIS - GRUPO TRIER'
+    );
+  }
+
+  getValidarMensagem(): Locator {
+    return this.page.locator(
+      'text= Sua mensagem foi enviada com sucesso! Muito obrigado pelo seu contato!.'
     );
   }
 }

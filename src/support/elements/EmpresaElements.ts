@@ -13,19 +13,19 @@ export default class LojinhaElements extends BaseElements {
 
   getValorDemo(): Locator {
     return this.page.locator('text=Solicitar demonstração');
-  } 
+  }
 
   getValorPrefa(): Locator {
     return this.page.locator('text=Prefeitura');
-  } 
+  }
 
   getValorGestor(): Locator {
     return this.page.locator('text=Gestor público');
-  } 
+  }
 
   getValorSantaCatarina(): Locator {
     return this.page.locator('text=Santa Catarina (SC)');
-  } 
+  }
 
   getCampoNome(): Locator {
     return this.page.locator('input[name="name"]');
@@ -69,5 +69,5 @@ export default class LojinhaElements extends BaseElements {
 
   getMensagemSucesso(): Locator {
     return this.page.locator('text=Mensagem enviada com sucesso!').nth(0);
-  } 
+  }
 }
