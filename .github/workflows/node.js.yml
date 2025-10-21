@@ -13,11 +13,11 @@ jobs:
     name: Run E2E Tests
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4.1.1
+    - uses: actions/checkout@v5.0.0
     - name: Use Node.js 21
-      uses: actions/setup-node@v4.0.0
+      uses: actions/setup-node@v6.0.0
       with:
-        node-version: 21
+        node-version: 22
         cache: 'npm'
     - run: npm install 
     - run: npx playwright install      
@@ -27,15 +27,15 @@ jobs:
     name: Run SonarCloud
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.1
+      - uses: actions/checkout@v5.0.0
         with:
-          fetch-depth: 0
+          fetch-depth: 0  
       - name: Setup Node.js environment
-        uses: actions/setup-node@v4.0.0
+        uses: actions/setup-node@v6.0.0
         with:
-          node-version: 21 
+          node-version: 22 
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@v2.0.2      
+        uses: SonarSource/sonarqube-scan-action@v6.0.0    
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
