@@ -12,7 +12,7 @@
 
 In order to execute this project you must follow the steps below:
 
-1. Install [Node JS](https://nodejs.org/) (version >= 20.x)
+1. Install [Node JS](https://nodejs.org/) (version >= 22.x)
 1. Run `npm i --save-dev` to install all the project dependencies
 1. Run `npx playwright install` to install the browsers used by Playwright
 1. Run `npm run ci` to execute the entire test suite
