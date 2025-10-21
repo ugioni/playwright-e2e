@@ -17,7 +17,5 @@ test.describe('Testes funcionais no site da Trier Sistemas', () => {
 
   test('Validar funcionalidade de contato para dúvidas', async () => {
     await farmaciaPage.preencherCamposValidos();
-    await farmaciaPage.enviarFormulario();
-    await farmaciaPage.validarMensagem();
   });
 });

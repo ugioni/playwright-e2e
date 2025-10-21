@@ -3,7 +3,7 @@ import { join } from 'path';
 import { TheConfig } from 'sicolo';
 import BethaPage from '../support/pages/EmpresaPage';
 
-test.describe.skip('Testes funcionais no site da Betha Sistemas', () => {
+test.describe('Testes funcionais no site da Betha Sistemas', () => {
   const CONFIG = join(__dirname, '../support/fixtures/config.yml');
   let bethaPage: BethaPage;
   const BASE_URL = TheConfig.fromFile(CONFIG)
