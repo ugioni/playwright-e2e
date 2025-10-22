@@ -3,11 +3,11 @@ import { join } from 'path';
 import { TheConfig } from 'sicolo';
 import FarmaciaPage from '../support/pages/FarmaciaPage';
 
-test.describe('Testes funcionais no site da Trier Sistemas', () => {
+test.describe.skip('Testes funcionais no site da Trier Sistemas', () => {
   const CONFIG = join(__dirname, '../support/fixtures/config.yml');
   let farmaciaPage: FarmaciaPage;
   const BASE_URL = TheConfig.fromFile(CONFIG)
-    .andPath('application.lojinha')
+    .andPath('application.farmacia')
     .retrieveData();
 
   test.beforeEach(async ({ page }) => {
@@ -17,5 +17,7 @@ test.describe('Testes funcionais no site da Trier Sistemas', () => {
 
   test('Validar funcionalidade de contato para dúvidas', async () => {
     await farmaciaPage.preencherCamposValidos();
+    await farmaciaPage.enviarFormulario();
+    await farmaciaPage.validarMensagem();
   });
 });

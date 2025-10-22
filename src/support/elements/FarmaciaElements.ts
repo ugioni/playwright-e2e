@@ -8,15 +8,15 @@ export default class FarmaciaElements extends BaseElements {
   }
 
   getCampoNome(): Locator {
-    return this.page.locator('#root');
+    return this.page.locator('input[name="nome"]').nth(1);
   }
 
   getCampoEmail(): Locator {
-    return this.page.locator('text=Click!');
+    return this.page.locator('input[name="email"]').nth(1);
   }
 
   getCampoTelefone(): Locator {
-    return this.page.locator('div[class="view-go css-yg2dtu"]');
+    return this.page.locator('input[name="telefone"]').nth(1);
   }
 
   getCampoEstado(): Locator {
