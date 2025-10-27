@@ -6,7 +6,7 @@
   "author": "ugioni",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^24.7.0",
+    "@types/node": "^24.9.1",
     "@zerostep/playwright": "^0.1.5",
     "mkdirp": "^3.0.1",
     "prettier": "^3.6.2",
@@ -15,8 +15,8 @@
   },
   "dependencies": {
     "@faker-js/faker": "^9.9.0",
-    "@playwright/test": "1.56.0",
-    "playwright": "1.56.0",
+    "@playwright/test": "1.56.1",
+    "playwright": "1.56.1",
     "sicolo": "^1.0.1"
   },
   "scripts": {
