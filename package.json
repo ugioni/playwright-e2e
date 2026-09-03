@@ -14,7 +14,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@faker-js/faker": "^9.9.0",
+    "@faker-js/faker": "^10.5.0",
     "@playwright/test": "1.56.1",
     "playwright": "1.56.1",
     "sicolo": "^1.0.1"
